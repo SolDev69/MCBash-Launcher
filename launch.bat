@@ -1,1 +1,0 @@
-java-windows/bin/java.exe -Xmx1024M -Xms1024M -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft
