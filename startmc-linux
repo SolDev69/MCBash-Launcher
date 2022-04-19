@@ -34,5 +34,5 @@ tar -xzvf OpenJDK8U-jre_x64_linux_hotspot_8u322b06.tar.gz
 mv jdk8u322-b06-jre/ jre/
 fi
 
-java -Djava.util.Arrays.useLegacyMergeSort=true -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft
+./jre/bin/java -Djava.util.Arrays.useLegacyMergeSort=true -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft
 exit
