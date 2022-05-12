@@ -5,5 +5,8 @@ Everything you need to launch Minecraft 1.5.2 anywhere.
 - All linux distros that aren't alpine based
 
 # Todo
-- Mac OS support (x64 only)
-- Bring back Windows support
+- Mac OS support (x64 and ARM64)
+- Linux ARM support (Raspberry Pi)
+- Windows support
+- Swap OpenJDK for Oracle JRE
+- Applet server 
