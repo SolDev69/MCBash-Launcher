@@ -1,6 +1,14 @@
 #!/bin/bash
 echo "[[ Minecraft ]]"
 echo "Launching Minecraft!"
+if test -z "$1" 
+then
+echo "Username empty!"
+echo "If you want to contine with a username, exit the script now via Ctrl+C and launch the script via adding a space after the file name and typing in the username that you want"
+echo "For example, if you want to have the name 'Notch' and the script is in a folder called mc on your desktop, you would start the script via '~/Desktop/mc/startmc-linux Notch' "
+echo "If you want to continue with a random username, press any other key"
+read X
+fi
 echo "Downloading jar files..."
 if test ! -f "lwjgl.jar"; then
 rm -f lwjgl.jar
@@ -38,7 +46,7 @@ wget https://launcher.mojang.com/v1/objects/465378c9dc2f779ae1d6e8046ebc46fb53a5
 else
 echo "Already downloaded!"
 fi
-echo "Downloading java8!"
+echo "Downloading java!"
 if test ! -d "jre/"; then
 rm -rf jre
 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_x64_linux_hotspot_8u322b06.tar.gz
