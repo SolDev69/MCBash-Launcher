@@ -1,18 +1,26 @@
 #!/bin/bash
-echo "[[ Minecraft 1.5.2 ]]"
+echo "[[ Minecraft ]]"
+echo "Launching Minecraft!"
+echo "Downloading jar files..."
 if test ! -f "lwjgl.jar"; then
 rm -f lwjgl.jar
 wget https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl/2.9.0/lwjgl-2.9.0.jar -O lwjgl.jar
+else
+echo "lwjgl.jar already downloaded!"
 fi
 if test ! -f "lwjgl_util.jar"; then
 rm -f lwjgl_util.jar
 wget https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl_util/2.9.0/lwjgl_util-2.9.0.jar -O lwjgl_util.jar
+else
+echo "lwjgl_util.jar already downloaded!"
 fi
 if test ! -f "jinput.jar"; then
 rm -f jinput.jar
 wget https://libraries.minecraft.net/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar -O jinput.jar
+else
+echo "jinput.jar already downloaded!"
 fi
-
+echo "Downloading natives!"
 if test ! -d "natives/"; then
 rm -rf natives
 mkdir natives 
@@ -20,19 +28,26 @@ cd natives
 wget https://libraries.minecraft.net/org/lwjgl/lwjgl/lwjgl-platform/2.9.0/lwjgl-platform-2.9.0-natives-linux.jar -O lwjgl-li
 unzip lwjgl-li
 cd ..
+else
+echo "Already downloaded!"
 fi
-
+echo "Downloading minecraft!"
 if test ! -f "minecraft.jar"; then
 rm -f minecraft.jar
 wget https://launcher.mojang.com/v1/objects/465378c9dc2f779ae1d6e8046ebc46fb53a57968/client.jar -O minecraft.jar
+else
+echo "Already downloaded!"
 fi
-
+echo "Downloading java8!"
 if test ! -d "jre/"; then
 rm -rf jre
 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jre_x64_linux_hotspot_8u322b06.tar.gz
 tar -xzvf OpenJDK8U-jre_x64_linux_hotspot_8u322b06.tar.gz
 mv jdk8u322-b06-jre/ jre/
+else
+echo "Already downloaded!"
 fi
-
-./jre/bin/java -Djava.util.Arrays.useLegacyMergeSort=true -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft
+echo "Starting Minecraft! Note: you can only join offline-mode servers"
+echo "Username is" $1
+./jre/bin/java -Djava.util.Arrays.useLegacyMergeSort=true -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft $1
 exit
