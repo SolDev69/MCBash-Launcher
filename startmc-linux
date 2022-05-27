@@ -1,6 +1,13 @@
 #!/bin/bash
 echo "[[ Minecraft ]]"
-if test -z "$1" 
+if [ $1 == "--help" ]
+then
+echo "Bash script that starts up Minecraft"
+echo "--changeversion : Change the current version of Minecraft that's installed"
+echo "--help : Brings up this menu"
+exit
+fi
+if [ -z "$1" ] || ([[ $1 == "--changeversion" ]] && [ -z "$2" ])
 then
 echo "Username empty!"
 echo "If you want to contine with a username, exit the script now via Ctrl+C and launch the script via adding a space after the file name and typing in the username that you want"
@@ -38,12 +45,13 @@ cd ..
 else
 echo "Already downloaded!"
 fi
-echo "Downloading minecraft!"
+clear
 if [ ! -f "minecraft.jar" ] || [[ $1 == "--changeversion" ]]; then
 rm -f minecraft.jar
 echo "What version of minecraft?"
 echo "Versions supported : 1.0, 1.1, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.3, 1.3.1, 1.3.2, 1.4, 1.4.1, 1.4.7, 1.5.2"
 read version
+echo "Downloading Minecraft version" $version
 case "$version" in
 
 	1.0) wget https://launcher.mojang.com/v1/objects/b679fea27f2284836202e9365e13a82552092e5d/client.jar -O minecraft.jar;;
