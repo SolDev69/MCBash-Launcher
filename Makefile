@@ -1,5 +1,5 @@
 .POSIX:
 all:
-	bash ./startmc-linux
+	bash ./startmc-linux Player
 clean:
 	bash ./cleanup

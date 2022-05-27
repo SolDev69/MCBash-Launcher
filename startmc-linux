@@ -68,6 +68,7 @@ mv jdk8u322-b06-jre/ jre/
 else
 echo "Already downloaded!"
 fi
+clear
 echo "Starting Minecraft! Note: you can only join offline-mode servers"
 if [[ $1 == "--changeversion" ]]; then
 echo "Username is" $2
