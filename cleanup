@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "[[ Minecraft ]]"
+echo "Clean uninstall script"
+echo "Are you sure? This will remove minecraft and all your saves!"
+read removeall
+if [[ "$removeall" == y || "$removeall" == Y ]]
+then
+rm -rf *.jar natives/ jre/ *.tar.gz
+rm -rf ~/.minecraft
+echo "Done!"
+else
+echo "Nothing removed!"
+fi

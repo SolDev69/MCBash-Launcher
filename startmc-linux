@@ -1,5 +1,11 @@
 #!/bin/bash
 echo "[[ Minecraft ]]"
+echo "If you would like to clean up the MC installation please press 'c' (no caps), if not just press enter"
+read clean
+if [[ "$clean" == c ]]; then
+./cleanup
+exit
+fi
 echo "Launching Minecraft!"
 if test -z "$1" 
 then
@@ -40,9 +46,16 @@ else
 echo "Already downloaded!"
 fi
 echo "Downloading minecraft!"
-if test ! -f "minecraft.jar"; then
+if [ ! -f "minecraft.jar" ] || [[ $1 == "--changeversion" ]]; then
 rm -f minecraft.jar
-wget https://launcher.mojang.com/v1/objects/465378c9dc2f779ae1d6e8046ebc46fb53a57968/client.jar -O minecraft.jar
+echo "What version of minecraft? (Major latest versions only, ie 5 = 1.5.2, 2 = 1.2.5, 3 = 1.3.2)"
+read version
+case "$version" in
+
+	5) wget https://launcher.mojang.com/v1/objects/465378c9dc2f779ae1d6e8046ebc46fb53a57968/client.jar -O minecraft.jar;;
+	2) wget https://launcher.mojang.com/v1/objects/4a2fac7504182a97dcbcd7560c6392d7c8139928/client.jar -O minecraft.jar;;
+	3) wget https://launcher.mojang.com/v1/objects/c2efd57c7001ddf505ca534e54abf3d006e48309/client.jar -O minecraft.jar;;
+esac
 else
 echo "Already downloaded!"
 fi
@@ -56,6 +69,11 @@ else
 echo "Already downloaded!"
 fi
 echo "Starting Minecraft! Note: you can only join offline-mode servers"
+if [[ $1 == "--changeversion" ]]; then
+echo "Username is" $2
+./jre/bin/java -Djava.util.Arrays.useLegacyMergeSort=true -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft $3
+else
 echo "Username is" $1
 ./jre/bin/java -Djava.util.Arrays.useLegacyMergeSort=true -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft $1
+fi
 exit
