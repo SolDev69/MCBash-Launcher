@@ -1,5 +1,5 @@
 # Minecraft
-Everything you need to launch Minecraft 1.5.2 anywhere.
+Everything you need to launch Minecraft legacy anywhere.
 
 ## Currently supported operating systems:
 - All linux distros that aren't alpine based
