@@ -7,6 +7,5 @@ Everything you need to launch Minecraft 1.5.2 anywhere.
 # Todo
 - Mac OS support (x64 and ARM64)
 - Linux ARM support (Raspberry Pi)
-- Windows support
-- Swap OpenJDK for Oracle JRE
+- Windows support (as in raw .bat without WSL)
 - Applet server 
