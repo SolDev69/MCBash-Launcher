@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "[[ Minecraft ]]"
-if [ $1 == "--help" ]
+if [[ $1 == "--help" ]]
 then
 echo "Bash script that starts up Minecraft"
 echo "--changeversion : Change the current version of Minecraft that's installed"
