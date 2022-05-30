@@ -67,6 +67,11 @@ case "$version" in
 	1.3.2) wget https://launcher.mojang.com/v1/objects/c2efd57c7001ddf505ca534e54abf3d006e48309/client.jar -O minecraft.jar;;
 	1.4) wget https://launcher.mojang.com/v1/objects/2007097b53d3eb43b2c1f3f78caab4a4ef690c7a/client.jar -O minecraft.jar;;
 	1.4.1) wget https://launcher.mojang.com/v1/objects/67604a9c206697032165fc067b6255e333e06275/client.jar -O minecraft.jar;;
+	1.4.2) wget https://launcher.mojang.com/v1/objects/42d6744cfbbd2958f9e6688dd6e78d86d658d0d4/client.jar -O minecraft.jar;;
+	1.4.3) wget https://launcher.mojang.com/v1/objects/f7274b201219b5729055bf85683eb6ef4f8024b4/client.jar -O minecraft.jar;;
+	1.4.4) wget https://launcher.mojang.com/v1/objects/b9b2a9e9adf1bc834647febc93a4222b4fd6e403/client.jar -O minecraft.jar;;
+	1.4.5) wget https://launcher.mojang.com/v1/objects/7a8a963ababfec49406e1541d3a87198e50604e5/client.jar -O minecraft.jar;;
+	1.4.6) wget https://launcher.mojang.com/v1/objects/116758f41b32e8d1a71a4ad6236579acd724bca7/client.jar -O minecraft.jar;;
 	1.4.7) wget https://launcher.mojang.com/v1/objects/53ed4b9d5c358ecfff2d8b846b4427b888287028/client.jar -O minecraft.jar;;
 	1.5.2) wget https://launcher.mojang.com/v1/objects/465378c9dc2f779ae1d6e8046ebc46fb53a57968/client.jar -O minecraft.jar;;
 
