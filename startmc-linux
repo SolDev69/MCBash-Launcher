@@ -77,6 +77,8 @@ case "$version" in
 	1.4.5) wget https://launcher.mojang.com/v1/objects/7a8a963ababfec49406e1541d3a87198e50604e5/client.jar -O minecraft.jar;;
 	1.4.6) wget https://launcher.mojang.com/v1/objects/116758f41b32e8d1a71a4ad6236579acd724bca7/client.jar -O minecraft.jar;;
 	1.4.7) wget https://launcher.mojang.com/v1/objects/53ed4b9d5c358ecfff2d8b846b4427b888287028/client.jar -O minecraft.jar;;
+	1.5) wget https://launcher.mojang.com/v1/objects/a3da981fc9b875a51975d8f8100cc0c201c2ce54/client.jar -O minecraft.jar;;
+	1.5.1) wget https://launcher.mojang.com/v1/objects/047136381a552f34b1963c43304a1ad4dc0d2d8e/client.jar -O minecraft.jar;;
 	1.5.2) wget https://launcher.mojang.com/v1/objects/465378c9dc2f779ae1d6e8046ebc46fb53a57968/client.jar -O minecraft.jar;;
 
 esac
