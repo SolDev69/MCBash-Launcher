@@ -56,7 +56,7 @@ case "$version" in
 
 	1.0) wget https://launcher.mojang.com/v1/objects/b679fea27f2284836202e9365e13a82552092e5d/client.jar -O minecraft.jar;;
 	1.1) wget https://launcher.mojang.com/v1/objects/f690d4136b0026d452163538495b9b0e8513d718/client.jar -O minecraft.jar;;
-	1.2) wget https://assets.minecraft.net/1_2/minecraft.jar;;
+	1.2) wget https://vault.omniarchive.uk/archive/java/client-release/1.2/pre/1.2-pre.jar -O minecraft.jar;;
 	1.2.1) wget https://launcher.mojang.com/v1/objects/c7662ac43dd04bfd677694a06972a2aaaf426505/client.jar -O minecraft.jar;;
 	1.2.2) wget https://launcher.mojang.com/v1/objects/1dadfc4de6898751f547f24f72c7271218e4e28f/client.jar -O minecraft.jar;;
 	1.2.3) wget https://launcher.mojang.com/v1/objects/5134e433afeba375c00bbdcd8aead1d3222813ee/client.jar -O minecraft.jar;;
