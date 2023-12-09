@@ -49,7 +49,7 @@ clear
 if [ ! -f "minecraft.jar" ] || [[ $1 == "--changeversion" ]]; then
 rm -f minecraft.jar
 echo "What version of minecraft?"
-echo "Versions supported : 1.0, 1.1, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.3, 1.3.1, 1.3.2, 1.4, 1.4.1, 1.4.7, 1.5.2"
+echo "Versions supported : 1.0, 1.1, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.3, 1.3.1, 1.3.2, 1.4, 1.4.1, 1.4.2, 1.4.3, 1.4.4, 1.4.5, 1.4.6, 1.4.7, 1.5, 1.5.1, 1.5.2"
 read version
 echo "Downloading Minecraft version" $version
 case "$version" in
