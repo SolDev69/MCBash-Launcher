@@ -1,4 +1,4 @@
-# Minecraft
+# MCBash-Launcher
 Everything you need to launch Minecraft 1.0-1.5.2 anywhere.
 
 ## Currently supported operating systems:
