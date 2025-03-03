@@ -94,7 +94,7 @@ clear
 echo "Starting Minecraft! Note: you can only join offline-mode servers"
 if [[ $1 == "--changeversion" ]]; then
 echo "Username is" $2
-./jre/bin/java -Djava.util.Arrays.useLegacyMergeSort=true -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft $3
+./jre/bin/java -Djava.util.Arrays.useLegacyMergeSort=true -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft $2
 else
 echo "Username is" $1
 ./jre/bin/java -Djava.util.Arrays.useLegacyMergeSort=true -Dhttp.proxyHost=betacraft.uk -Djava.library.path=natives/ -cp minecraft.jar:lwjgl.jar:lwjgl_util.jar:jinput.jar net.minecraft.client.Minecraft $1
